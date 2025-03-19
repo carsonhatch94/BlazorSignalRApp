@@ -19,6 +19,16 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Display root directory structure
+        run: ls -la
+
+      - name: Display BlazorSignalRApp.Client directory structure
+        run: ls -la BlazorSignalRApp.Client
+
+      - name: Display BlazorSignalRApp directory structure
+        run: ls -la BlazorSignalRApp
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
